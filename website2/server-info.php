@@ -9,6 +9,7 @@
     'Current Page' => $_SERVER['PHP_SELF'],
     'Script Name' => $_SERVER['SCRIPT_NAME'],
     'Absolute Path' => $_SERVER['SCRIPT_FILENAME']
+    
   ];
 
   // create client array
@@ -16,6 +17,11 @@
     'Client System Info' => $_SERVER['HTTP_USER_AGENT'],
     'Client IP' => $_SERVER['REMOTE_ADDR'],
     'Remote Port' => $_SERVER['REMOTE_PORT']
+  ];
+
+  // query string
+  $query = [
+    'Query String' => $_SERVER['QUERY_STRING']
   ];
 
 ?>

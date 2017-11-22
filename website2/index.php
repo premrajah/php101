@@ -35,6 +35,18 @@
       </ul>
     <?php endif; ?>
     <!-- end shorthand php syntax -->
+
+    <h1>Query Info</h1>
+    <?php if($query): ?>
+      <ul class="list-group">
+        
+        <?php foreach ($query as $key => $value): ?>
+          <li class="list-group-item"><?php echo $key . ' : ' . $value ?></li>    
+        <?php endforeach ?>
+
+      </ul>
+    <?php endif; ?>
+    <!-- end shorthand php syntax -->
   </div>
 </body>
 </html>
