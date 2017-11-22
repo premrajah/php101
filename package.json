@@ -1,0 +1,23 @@
+{
+  "name": "php101",
+  "version": "1.0.0",
+  "description": "Php learn",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp browser-sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/premrajah/php101.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/premrajah/php101/issues"
+  },
+  "homepage": "https://github.com/premrajah/php101#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
