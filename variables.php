@@ -7,6 +7,24 @@
   <title>Variables</title>
 </head>
 <body>
-  <h1><?php echo "Hello php" ?></h1>
+  <h1>
+    <?php 
+      $output = "php";
+      $num1 = 24; // integers
+      $num2 = 4.4; //floats
+      $yesno = true;
+      
+      // constants 
+      define('PI', 3.14, true);
+    
+
+      echo "Hello $output, $num1 " . $num2 . $yesno ;
+
+      echo ' Escape: They\'re' . "\r\n";
+
+      echo PI;
+      echo pi;
+    ?>
+    </h1>
 </body>
 </html>
