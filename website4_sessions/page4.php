@@ -28,7 +28,7 @@
   <h3>session_destroy()</h3>
 
   <br>
-<a type="button" class="btn btn-primary" href="page1.php">Page1</a>
+<a type="button" class="btn btn-primary" href="index.php">Page1</a>
 </div>
 
 
