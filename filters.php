@@ -15,6 +15,7 @@
 
     echo $email . '<br>';
 
+
     // remove illeagle characters
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
