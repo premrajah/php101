@@ -1,14 +1,18 @@
 <?php
+
   require('config/config.php');
   require('config/db.php');
 
+  //Get webpage query id
+  $id = mysqli_real_escape_string($conn, $_GET['id']);
+
   // create query
-  $query = 'SELECT * FROM posts';
+  $query = 'SELECT * FROM posts WHERE id =' . $id;
   // fetch query and story in var
   $result = mysqli_query($conn, $query);
 
   // fetch data and add to associative array
-  $posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  $posts = mysqli_fetch_assoc($result);
 
   // free the result from memory
   mysqli_free_result($result);
@@ -17,35 +21,34 @@
   mysqli_close($conn);
 
 ?>
+
   <?php include('inc/header.php') ?>
 
   <div class="container">
-    <h1 class="header">Posts (Blog)</h1>
-    <?php foreach($posts as $post): ?>
+    <h1 class="header"><?php echo $posts['title']; ?></h1>
+    <div class="">
+      <a href="<?php echo ROOT_URL; ?>" class="btn btn-default back-btn">Back</a>
+    </div>
     <div class="post card">
       <div class="card-header">
         <h3>Title:
-          <?php echo $post['title']; ?>
+          <?php echo $posts['title']; ?>
         </h3>
       </div>
       <div class="card-body">
         <p class="card-text">
-          <?php echo $post['body']; ?>
+          <?php echo $posts['body']; ?>
         </p>
-      </div>
-      <div>
-        <a href="post.php?id=<?php echo $post['id']; ?>" class="btn btn-primary float-right read-more-btn">Read more</a>
       </div>
       <div class="card-footer">
         <p> Created by:
-          <?php echo $post['author']; ?>
-          <span class="float-right">Created at:
-            <?php echo $post['created_at']; ?>
+          <?php echo $posts['author']; ?> 
+          <span class="float-right">
+            Created at: <?php echo $posts['created_at']; ?>
           </span>
         </p>
       </div>
     </div>
-    <?php endforeach; ?>
   </div>
 
   <?php include('inc/footer.php') ?>
