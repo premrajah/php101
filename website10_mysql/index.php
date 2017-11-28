@@ -4,7 +4,7 @@ require 'config/config.php';
 require 'config/db.php';
 
 // select everything from database
-$query = 'SELECT * FROM posts';
+$query = 'SELECT * FROM posts ORDER BY created_at DESC';
 
 // get results from query
 $result = mysqli_query($connection, $query);
