@@ -4,9 +4,14 @@
     aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="<?php echo ROOT_URL; ?>">Home</a>
-  </li>
-</ul>
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="<?php echo ROOT_URL; ?>">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo ROOT_URL; ?>addpost.php">Add Post</a>
+    </li>
+  </ul>
+</div>
 </nav>

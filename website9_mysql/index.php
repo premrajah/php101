@@ -3,7 +3,7 @@
   require('config/db.php');
 
   // create query
-  $query = 'SELECT * FROM posts';
+  $query = 'SELECT * FROM posts ORDER BY created_at DESC';
   // fetch query and story in var
   $result = mysqli_query($conn, $query);
 
@@ -20,6 +20,7 @@
   <?php include('inc/header.php') ?>
 
   <div class="container">
+
     <h1 class="header">Posts (Blog)</h1>
     <?php foreach($posts as $post): ?>
     <div class="post card">
@@ -46,6 +47,8 @@
       </div>
     </div>
     <?php endforeach; ?>
+
   </div>
+  <!-- end container -->
 
   <?php include('inc/footer.php') ?>

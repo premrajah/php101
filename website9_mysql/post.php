@@ -25,9 +25,10 @@
   <?php include('inc/header.php') ?>
 
   <div class="container">
+
     <h1 class="header"><?php echo $posts['title']; ?></h1>
     <div class="">
-      <a href="<?php echo ROOT_URL; ?>" class="btn btn-default back-btn">Back</a>
+      <a href="<?php echo ROOT_URL; ?>" class="btn btn-primary back-btn">Back</a>
     </div>
     <div class="post card">
       <div class="card-header">
@@ -40,15 +41,17 @@
           <?php echo $posts['body']; ?>
         </p>
       </div>
-      <div class="card-footer">
-        <p> Created by:
+      <div class="card-footer">Created by:
           <?php echo $posts['author']; ?> 
           <span class="float-right">
             Created at: <?php echo $posts['created_at']; ?>
           </span>
-        </p>
       </div>
     </div>
+    <div class="editing">
+    <a href="<?php echo ROOT_URL; ?>editpost.php?=<?php echo $_POST['id']; ?>" class="btn btn-primary edit-btn float-right">Edit</a>
+    </div>
   </div>
+  <!-- end container -->
 
   <?php include('inc/footer.php') ?>
